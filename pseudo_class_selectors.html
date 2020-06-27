@@ -1,10 +1,56 @@
 <!DOCTYPE html>
+<!-- target="_balnk"  "it is used to force browser open a new tab" -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>pseudo-selectors</title>
+    <style>
+      header li{
+        list-style: none;
+      }
+      a:link, a:visited{
+        text-decoration: none;
+        background-color: green;
+        border: 2px black;
+        color: black;
+        width: 100px;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 3px;
+        margin-top: 3px;
+        border-radius: 5px;
+      }
+      a:hover, a:active
+      {
+        background-color: red;
+        color: blue;
+      }
+      section div:nth-child(odd)
+      {
+          background-color: gray;
+      }
+      section div:nth-child(4):hover
+      {
+        background-color: green;
+        cursor:pointer;
+      }
+    </style>
   </head>
   <body>
-    
+      <!-- <a href="#div1">div_set</a>     -->
+    <header>
+      <ul>
+        <li><a href="/">Home</a> </li>
+        <li><a href="http://google.com" target="_blank">Google</a></li>
+        <li><a href="http://youtube.com" target="_blank">Youtube</a></li>
+      </ul>
+    </header>
+    <section>
+      <div id="div1">DIV1</div>
+      <div>DIV2</div>
+      <div>DIV3</div>
+      <div>DIV4</div>
+      <div>DIV5</div>
+    </section>
   </body>
 </html>
